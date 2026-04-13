@@ -10,5 +10,5 @@ import lombok.ToString;
 public class RequestModel {
 
     String foodName;
-    String preparation;
+    String method;
 }

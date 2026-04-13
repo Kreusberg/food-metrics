@@ -1,10 +1,9 @@
 package food_metrics.api.Food.Repository;
 
-import food_metrics.api.Food.Model.FoodModel;
 import food_metrics.api.Food.Model.PreparationModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface FoodRepository extends JpaRepository<FoodModel, Long> {
+public interface PreparationRepository extends JpaRepository<PreparationModel, Long> {
 
-    boolean existsByFoodName(String food);
+    boolean existsByMethod(String method);
 }

@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Builder
 @Getter
@@ -12,8 +11,8 @@ import java.util.Date;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Food")
-public class FoodModel {
+@Table(name = "Preparation")
+public class PreparationModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,9 +22,7 @@ public class FoodModel {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    @Column(name = "food_name")
-    private String foodName;
-
-    @Column(name = "food_id")
-    private int foodId;
+    @Column(name = "form")
+    private String method;
 }
+
