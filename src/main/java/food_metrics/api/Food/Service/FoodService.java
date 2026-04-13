@@ -48,4 +48,10 @@ public class FoodService {
 
         return mapper.readerForListOf(NutrientModel.class).readValue(foodsList.get(0).path("foodNutrients"));
     }
+
+    public Optional<NutrientModel> getNutrientInfoFromId(RequestModel param, int id) throws IOException, InterruptedException {
+        List<NutrientModel> nutrients = getNutrientsInfoList(param);
+
+        return Optional.of(nutrients.stream().filter(c -> c.getNutrientId() == id).findFirst().orElse(new NutrientModel()));
+    }
 }

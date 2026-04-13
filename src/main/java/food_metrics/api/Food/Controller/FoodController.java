@@ -23,4 +23,9 @@ public class FoodController {
     public List<NutrientModel> getNutrientsInfoList(@RequestBody RequestModel param) throws IOException, InterruptedException {
         return foodService.getNutrientsInfoList(param);
     }
+
+    @PostMapping("nutrients/{id}")
+    public Optional<NutrientModel> getNutrientsInformationList(@RequestBody RequestModel param, @PathVariable int id) throws IOException, InterruptedException {
+        return foodService.getNutrientInfoFromId(param, id);
+    }
 }
